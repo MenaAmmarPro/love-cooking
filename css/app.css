@@ -1,0 +1,111 @@
+/* love-cooking — page styles on top of the shared love theme */
+
+main {
+  width: min(1000px, calc(100% - 40px));
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  padding-bottom: 3rem;
+}
+
+.hero {
+  min-height: auto;
+  text-align: center;
+  padding: 2.4rem 1rem 0;
+}
+
+.eyebrow { color: var(--pink); }
+.hero h1 { margin: 0.2rem 0 0.4rem; }
+.subtitle { margin: 0; color: var(--muted); }
+
+.sent-note {
+  text-align: center;
+  background: rgba(255, 159, 207, 0.14);
+  border: 1px solid var(--pink-strong);
+  border-radius: 999px;
+  padding: 0.55rem 1rem;
+  margin: 0 auto;
+  max-width: 32rem;
+  color: var(--text);
+}
+
+.panel {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  padding: 1.3rem 1.4rem;
+  box-shadow: var(--shadow);
+  max-width: 44rem;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.panel h2 { margin: 0 0 0.4rem; font-size: 1.05rem; }
+.panel h3 { margin: 1rem 0 0.4rem; font-size: 0.95rem; color: var(--text); }
+.panel p { color: var(--muted); margin: 0 0 0.8rem; }
+
+.tonight-panel { text-align: center; }
+.tonight-result {
+  font-family: Georgia, "Iowan Old Style", serif;
+  font-size: 1.2rem;
+  color: var(--text) !important;
+  margin: 0.4rem 0 0.9rem !important;
+  min-height: 1.6em;
+}
+.cooked-line { color: var(--muted); margin: 0.9rem 0 0 !important; font-size: 0.9rem; }
+.cooked-line span { color: var(--text); font-weight: 700; }
+
+.recipe-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 0.7rem;
+  margin-top: 0.6rem;
+}
+
+.recipe-card {
+  text-align: left;
+  border: 1px solid var(--line);
+  background: var(--bg-soft);
+  border-radius: 14px;
+  padding: 0.8rem 0.9rem;
+  cursor: pointer;
+  color: var(--text);
+  font: inherit;
+  transition: border-color 0.25s ease, transform 0.15s ease;
+}
+
+.recipe-card:hover { border-color: var(--pink); transform: translateY(-2px); }
+.recipe-card.done { border-color: var(--pink-strong); }
+.recipe-card .rc-name { font-weight: 600; display: block; }
+.recipe-card .rc-tag { color: var(--muted); font-size: 0.8rem; display: block; margin-top: 0.15rem; }
+.recipe-card .rc-done { color: var(--pink); font-size: 0.75rem; display: block; margin-top: 0.3rem; }
+
+.recipe-view { position: relative; }
+.close-view { position: absolute; top: 0.9rem; right: 0.9rem; }
+.view-tag { color: var(--pink) !important; font-style: italic; margin: 0 0 0.4rem !important; }
+.view-ingredients, .view-steps {
+  color: var(--muted);
+  line-height: 1.6;
+  padding-left: 1.2rem;
+  margin: 0;
+}
+.view-steps li { margin-bottom: 0.25rem; }
+.view-cooked { color: var(--pink) !important; font-size: 0.85rem; margin: 1rem 0 0.7rem !important; min-height: 1.2em; }
+
+.add-panel label { display: block; font-size: 0.8rem; color: var(--muted); margin: 0.6rem 0 0.3rem; }
+.add-panel input, .add-panel textarea {
+  width: 100%;
+  padding: 0.6rem 0.75rem;
+  border-radius: 12px;
+  border: 1px solid var(--line);
+  background: var(--bg-soft);
+  color: var(--text);
+  font: inherit;
+  resize: vertical;
+}
+.add-panel input:focus, .add-panel textarea:focus { outline: 2px solid var(--pink-strong); outline-offset: 1px; }
+.add-panel .button { margin-top: 0.7rem; }
+
+.add-msg { min-height: 1.2em; font-size: 0.85rem; color: var(--pink); margin: 0.7rem 0 0; }
+.share-note { min-height: 1.2em; font-size: 0.85rem; color: var(--muted); margin: 0.7rem 0 0; }

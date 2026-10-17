@@ -1,0 +1,14 @@
+{
+  "name": "Our Kitchen — recipes for two",
+  "short_name": "Our Kitchen",
+  "description": "A little cookbook for Mena and Ammar — pick a dish, cook it together, tick it off.",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#090b20",
+  "theme_color": "#090b20",
+  "icons": [
+    { "src": "assets/favicon.svg", "sizes": "any", "type": "image/svg+xml" },
+    { "src": "assets/apple-touch-icon.png", "sizes": "180x180", "type": "image/png" },
+    { "src": "assets/og-image.png", "sizes": "512x512", "type": "image/png" }
+  ]
+}

@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Our Kitchen — recipes for two</title>
+  <meta name="description" content="A little cookbook for Mena and Ammar — pick a dish, cook it together, tick it off.">
+  <meta property="og:title" content="Our Kitchen — recipes for two">
+  <meta property="og:description" content="A little cookbook for Mena and Ammar — pick a dish, cook it together, tick it off.">
+  <meta property="og:type" content="website">
+  <meta name="theme-color" content="#090b20">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="stylesheet" href="css/theme.css">
+  <link rel="stylesheet" href="css/app.css">
+</head>
+<body data-page="cooking">
+  <canvas id="starfield" aria-hidden="true"></canvas>
+
+  <header class="site-header">
+    <a class="brand" href="https://menaammarpro.github.io/">&#9829; Mena &amp; Ammar</a>
+    <button class="menu-toggle" aria-label="Open navigation" aria-expanded="false">Menu</button>
+    <nav class="nav-links" aria-label="Main">
+      <a href="https://menaammarpro.github.io/">All projects</a>
+      <a href="https://menaammarpro.github.io/love-diary/">Our diary</a>
+      <a href="https://menaammarpro.github.io/love-chat/">Chat</a>
+      <button class="theme-toggle" type="button" aria-label="Toggle color theme">Theme</button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <p class="eyebrow">Something warm, together</p>
+      <h1>Our <span>kitchen</span></h1>
+      <p class="subtitle">A little cookbook of dishes we&rsquo;ll make side by side.</p>
+    </section>
+
+    <p id="sent-note" class="sent-note" hidden></p>
+
+    <section class="panel tonight-panel">
+      <h2>What&rsquo;s for tonight?</h2>
+      <p id="tonight-result" class="tonight-result">Let the kitchen decide.</p>
+      <button id="tonight" class="button button-primary" type="button">Pick a dish</button>
+      <p class="cooked-line"><span id="cooked-count">0</span> dishes cooked together</p>
+    </section>
+
+    <section class="panel book-panel">
+      <h2>The recipe book</h2>
+      <div id="recipe-list" class="recipe-list"></div>
+    </section>
+
+    <section id="recipe-view" class="panel recipe-view" hidden>
+      <button id="close-view" class="button button-ghost button-small close-view" type="button">Close</button>
+      <h2 id="view-name">Recipe</h2>
+      <p id="view-tag" class="view-tag">&nbsp;</p>
+      <h3>Ingredients</h3>
+      <ul id="view-ingredients" class="view-ingredients"></ul>
+      <h3>Method</h3>
+      <ol id="view-steps" class="view-steps"></ol>
+      <p id="view-cooked" class="view-cooked">&nbsp;</p>
+      <button id="mark-cooked" class="button button-primary" type="button">We cooked this</button>
+    </section>
+
+    <section class="panel add-panel">
+      <h2>Add a recipe</h2>
+      <p>Give it a name, the ingredients, and how we make it.</p>
+      <label for="add-name">Dish name</label>
+      <input id="add-name" type="text" maxlength="60" placeholder="Something we invented&hellip;" autocomplete="off">
+      <label for="add-ingredients">Ingredients (one per line)</label>
+      <textarea id="add-ingredients" rows="3" placeholder="Flour&#10;Love&#10;A little salt"></textarea>
+      <label for="add-steps">Method (one step per line)</label>
+      <textarea id="add-steps" rows="3" placeholder="Mix it&#10;Cook it&#10;Share it"></textarea>
+      <button id="add" class="button button-primary" type="button">Add to the book</button>
+      <p id="add-msg" class="add-msg">&nbsp;</p>
+    </section>
+
+    <section class="panel share-panel">
+      <h2>Cook with me</h2>
+      <p>Send Ammar a dish and cook the same thing tonight.</p>
+      <button id="share" class="button button-primary" type="button">Copy a recipe link</button>
+      <p id="note" class="share-note">&nbsp;</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>Made with love, just for you <span aria-hidden="true">&#9829;</span></p>
+    <p class="footer-small">Ammar &rarr; Mena &middot; Karachi &rarr; Bucharest</p>
+  </footer>
+
+  <button id="back-to-top" class="back-to-top" aria-label="Back to top" hidden>&#8679;</button>
+  <script src="js/theme-main.js" defer></script>
+  <script src="js/effects.js" defer></script>
+  <script src="js/app.js" defer></script>
+</body>
+</html>
