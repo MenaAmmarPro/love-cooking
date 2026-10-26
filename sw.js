@@ -1,6 +1,6 @@
 "use strict";
 
-const CACHE = "love-cooking-v1";
+const CACHE = "love-cooking-v2";
 const ASSETS = [
   ".",
   "index.html",
